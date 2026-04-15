@@ -53,7 +53,7 @@ Phân khúc khách hàng: Nhóm khách hàng nào có mức độ tương tác (
 
 * Define (Xác định vấn đề): Xác định các chỉ số cốt lõi (KPIs): Total Spend, ROI, CTR, CR, Profit Margin, Ad Engagement, Budget Utilization.
 
-* Ideate (Lên ý tưởng): Cấu trúc báo cáo thành ba góc nhìn chính:
+* Ideate (Lên ý tưởng):
 <img width="1242" height="848" alt="marketing" src="https://github.com/user-attachments/assets/ad5120fd-10c0-4a1c-a4a6-7c31f8edaa53" />
 
 
