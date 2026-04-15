@@ -68,7 +68,7 @@ Phân khúc khách hàng: Nhóm khách hàng nào có mức độ tương tác (
 * Test (Kiểm thử): Đảm bảo các bộ lọc hoạt động mượt mà, biểu đồ tương tác tốt, và giao diện trực quan dễ hiểu.
 
 
-## III. Trực quan hóa Dữ liệu trên Powerpoint (Visualization), Xây dựng dashboard theo dõi hiệu suất
+## III. Trực quan hóa Dữ liệu trên Powerpoint (Visualization), Xây dựng dashboard theo dõi hiệu suất ( Power BI)
 Trang 1: Marketing Overview (Tổng quan Hiệu suất)  
 Hiển thị các KPI chính: Total Spend, ROI, CTR, CR, Profit Margin.  
 <img width="1315" height="739" alt="image" src="https://github.com/user-attachments/assets/ebc0e8fd-c389-447a-bd2c-4433643ce729" />
