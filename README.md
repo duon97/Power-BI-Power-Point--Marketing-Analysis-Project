@@ -71,17 +71,14 @@ Phân khúc khách hàng: Nhóm khách hàng nào có mức độ tương tác (
 ## III. Trực quan hóa Dữ liệu trên Powerpoint (Visualization), Xây dựng dashboard theo dõi hiệu suất
 Trang 1: Marketing Overview (Tổng quan Hiệu suất)  
 Hiển thị các KPI chính: Total Spend, ROI, CTR, CR, Profit Margin.  
-Biểu đồ so sánh hiệu suất giữa các kênh quảng cáo và xu hướng chi tiêu theo thời gian.
 <img width="1315" height="739" alt="image" src="https://github.com/user-attachments/assets/ebc0e8fd-c389-447a-bd2c-4433643ce729" />
 
+Trang 2: Campaign Diagnosis (Chi tiết về P&L, Impression, Click, CTR... trong từng tháng)  
 
-Trang 2: Campaign Diagnosis (Chẩn đoán Chiến dịch)  
-Phân tích sâu các chiến dịch có hiệu suất thấp, xác định nguyên nhân (ngân sách, khuyến mãi, phân khúc khách hàng).
-Biểu đồ tương quan giữa Ad Spend và P&L, cùng bảng phân tích hiệu quả từng loại khuyến mãi.
 <img width="1319" height="734" alt="image" src="https://github.com/user-attachments/assets/b90eee17-b420-4b58-8b49-7f4336f5871b" />
 
 ## IV. Thông tin Chi tiết (Insights)
-** Về Hiệu suất Chiến dịch:
+**  Về Hiệu suất Chiến dịch:
 
 * Chi tiêu tối ưu thúc đẩy lợi nhuận.
 <img width="1238" height="696" alt="image" src="https://github.com/user-attachments/assets/14805136-f36a-48fe-94f6-46e21c1f6cfd" />
