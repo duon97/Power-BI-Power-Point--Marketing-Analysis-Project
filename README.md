@@ -1,53 +1,115 @@
 # 📊 Marketing Analytics Project
 
-## 1. Overview
-This project focuses on analyzing marketing data (Ads, Website, Social, Email) to evaluate campaign performance and customer behavior.  
-The goal is to provide data-driven insights that support **budget allocation, ROI optimization, and customer engagement strategies**.
+### Báo cáo Phân tích Hiệu quả Marketing với Power BI
+## I. Giới thiệu
+# 1. Giới thiệu về Bộ dữ liệu
+Dự án này sử dụng bộ dữ liệu Marketing tổng hợp, mô phỏng hoạt động quảng cáo và chiến dịch truyền thông của doanh nghiệp trên nhiều kênh (Google Ads, Facebook Ads, Email Marketing, v.v.).
+Bộ dữ liệu bao gồm các thông tin về ngân sách, hiệu suất quảng cáo, tỷ lệ chuyển đổi (Conversion Rate), chi phí trên mỗi lượt click (CPC), doanh thu (Revenue) và lợi nhuận (P&L).
 
----
+Mục tiêu của dự án là xây dựng Dashboard Power BI giúp đội ngũ Marketing và Ban lãnh đạo chẩn đoán vấn đề hiệu suất, phát hiện nguyên nhân gốc rễ, và đề xuất chiến lược tối ưu hóa ngân sách quảng cáo.
 
-## 2. Dataset
-- Data sources: Facebook Ads, Google Ads, Website Analytics, CRM.  
-- Key metrics (KPIs):  
-  - **Impressions**  
-  - **Clicks**  
-  - **CTR (Click-through Rate)**  
-  - **Conversions / Conversion Rate**  
-  - **CPC (Cost per Click)**  
-  - **CPM (Cost per 1000 Impressions)**  
-  - **Profit & Loss**
+# 2. Giải thích về Bộ dữ liệu (Data Dictionary)
+Dữ liệu được tổ chức theo mô hình quan hệ với bảng trung tâm là CampaignPerformance và các bảng danh mục bổ trợ.
 
----
+Bảng Fact - CampaignPerformance (Hiệu suất Chiến dịch):
 
-## 3. Methodology
-- Data Cleaning & Transformation (Python / SQL / Power BI)  
-- Exploratory Data Analysis (EDA)  
-- KPI tracking & Visualization (Power BI / Tableau)  
-- Time-series / Trend Analysis to detect seasonal patterns  
-- Customer Segmentation (based on clicks, conversions, behavior)
+CampaignName: Tên chiến dịch quảng cáo.
 
----
+Channel: Kênh quảng cáo (Google, Facebook, Email, Display, v.v.).
 
-## 4. Dashboard / Outputs
-- **Power BI Dashboard** includes:  
-  - Performance by channel (Facebook, Google, Email, etc.)  
-  - Month-over-Month changes in Cost, CTR, Conversion Rate  
-  - ROI by campaign & keyword  
-  - Customer Segmentation & Key Insights  
+Budget: Ngân sách phân bổ cho chiến dịch.
 
----
+Spend: Chi phí thực tế đã sử dụng.
 
-## 5. Insights & Use Cases
-- Identify underperforming campaigns → optimize budget allocation.  
-- Detect potential customer groups with high CTR but low conversions → improve ad content.  
-- Forecast ROI trends over time.  
+Clicks / Impressions: Số lượt click và hiển thị.
 
----
+CTR / CR: Tỷ lệ click và tỷ lệ chuyển đổi.
 
-## 6. Tech Stack
- 
-- **Power BI** (Dashboard & KPI tracking)
+Revenue / Profit: Doanh thu và lợi nhuận.
 
----
+PromotionType: Loại khuyến mãi (Discount, Free Shipping, Promo Code).
+
+Các bảng Dimension (Danh mục):
+
+AudienceSegment: Phân loại nhóm khách hàng mục tiêu.
+
+Seasonality: Ghi nhận yếu tố mùa vụ (Holiday, Sale Season, Launch Period).
+
+AdType: Phân loại hình thức quảng cáo (Video, Banner, Text, Carousel).
+
+# 3. Câu hỏi Kinh doanh (Business Questions)
+Hiệu suất tổng thể: Ngân sách quảng cáo được phân bổ như thế nào? Kênh nào mang lại ROI cao nhất?
+
+Phân tích lợi nhuận: Có mối tương quan nào giữa chi tiêu quảng cáo (Ad Spend) và lợi nhuận (P&L)?
+
+Tối ưu hóa ngân sách: Các chiến dịch có ngân sách cao có thực sự mang lại hiệu quả tương xứng không?
+
+Hiệu quả khuyến mãi: Loại khuyến mãi nào (Discount, Free Shipping, Promo Code) tạo ra tỷ lệ chuyển đổi cao nhất?
+
+Phân khúc khách hàng: Nhóm khách hàng nào có mức độ tương tác (Engagement) và chuyển đổi tốt nhất?
+
+## II. Phương pháp Tư duy Thiết kế (Design Thinking Method)
+Empathize (Thấu cảm): Đặt mình vào góc nhìn của Giám đốc Marketing (CMO) – người cần hiểu rõ nguyên nhân khiến ROI giảm và xác định chiến dịch nào đang tiêu tốn ngân sách mà không mang lại lợi nhuận.
+
+Define (Xác định vấn đề): Xác định các chỉ số cốt lõi (KPIs): Total Spend, ROI, CTR, CR, Profit Margin, Ad Engagement, Budget Utilization.
+
+Ideate (Lên ý tưởng): Cấu trúc báo cáo thành ba góc nhìn chính:
+
+Performance Overview: Tổng quan hiệu suất các kênh.
+
+Budget Efficiency: Phân tích hiệu quả phân bổ ngân sách.
+
+Campaign Diagnosis: Chẩn đoán nguyên nhân hiệu suất thấp.
+
+Prototype (Xây dựng mô hình):
+
+Data Preparation: Làm sạch dữ liệu, chuẩn hóa định dạng ngày tháng, xử lý giá trị null.
+
+Data Modeling: Liên kết bảng CampaignPerformance với AudienceSegment, Seasonality, AdType.
+
+DAX: Tạo các Measures tính ROI, CTR trung bình, và tỷ lệ lợi nhuận.
+
+Test (Kiểm thử): Đảm bảo các bộ lọc hoạt động mượt mà, biểu đồ tương tác tốt, và giao diện trực quan dễ hiểu.
+<img width="1242" height="848" alt="marketing" src="https://github.com/user-attachments/assets/ad5120fd-10c0-4a1c-a4a6-7c31f8edaa53" />
+
+
+## III. Trực quan hóa Dữ liệu (Visualization)
+Trang 1: Marketing Overview (Tổng quan Hiệu suất)  
+Hiển thị các KPI chính: Total Spend, ROI, CTR, CR, Profit Margin.  
+Biểu đồ so sánh hiệu suất giữa các kênh quảng cáo và xu hướng chi tiêu theo thời gian.
+
+Trang 2: Campaign Diagnosis (Chẩn đoán Chiến dịch)  
+Phân tích sâu các chiến dịch có hiệu suất thấp, xác định nguyên nhân (ngân sách, khuyến mãi, phân khúc khách hàng).
+Biểu đồ tương quan giữa Ad Spend và P&L, cùng bảng phân tích hiệu quả từng loại khuyến mãi.
+
+## IV. Thông tin Chi tiết (Insights)
+Về Hiệu suất Chiến dịch:
+
+Các chiến dịch có ngân sách cao chưa chắc mang lại lợi nhuận tương xứng.
+
+Tỷ lệ CTR và CR biến động mạnh ở các chiến dịch video, cho thấy cần tối ưu nội dung sáng tạo.
+
+Về Hiệu quả Khuyến mãi:
+
+Khuyến mãi “Free Shipping” tạo ra tỷ lệ chuyển đổi cao nhất, nhưng lợi nhuận biên thấp.
+
+“Promo Code” giúp tăng lượng truy cập nhưng không cải thiện doanh thu đáng kể.
+
+Về Phân bổ Ngân sách:
+
+Ngân sách đang tập trung quá nhiều vào kênh Facebook Ads, trong khi Google Ads mang lại ROI cao hơn.
+
+Cần xem xét lại chiến lược phân bổ ngân sách theo mùa vụ và nhóm khách hàng.
+
+## V. Đề xuất & Khuyến nghị (Recommendations)
+Tối ưu hóa ngân sách: Giảm ngân sách cho các chiến dịch có ROI thấp, chuyển hướng sang kênh có hiệu quả cao hơn.
+
+Cải thiện nội dung quảng cáo: Tập trung vào tối ưu hóa thông điệp và định dạng video để tăng CTR.
+
+Chiến lược khuyến mãi thông minh: Kết hợp “Promo Code” với “Limited-Time Offer” để vừa tăng chuyển đổi vừa duy trì lợi nhuận.
+
+Phân tích theo mùa vụ: Tăng cường chiến dịch vào các giai đoạn cao điểm (Holiday, Sale Season) để tận dụng hành vi mua sắm.
+
+Xây dựng hệ thống giám sát hiệu suất: Thiết lập Dashboard theo thời gian thực để phát hiện sớm các chiến dịch kém hiệu quả và điều chỉnh kịp thời.
 
 
