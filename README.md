@@ -9,44 +9,43 @@ Bộ dữ liệu bao gồm các thông tin về ngân sách, hiệu suất quả
 Mục tiêu của dự án là xây dựng Dashboard Power BI giúp đội ngũ Marketing và Ban lãnh đạo chẩn đoán vấn đề hiệu suất, phát hiện nguyên nhân gốc rễ, và đề xuất chiến lược tối ưu hóa ngân sách quảng cáo.
 
 # 2. Giải thích về Bộ dữ liệu (Data Dictionary)
-Dữ liệu được tổ chức theo mô hình quan hệ với bảng trung tâm là CampaignPerformance và các bảng danh mục bổ trợ.
+* Chỉ sốhiệusuất
+Impressions (Lượt hiển thị)
 
-Bảng Fact - CampaignPerformance (Hiệu suất Chiến dịch):
+Clicks (Số lần nhấp)
 
-CampaignName: Tên chiến dịch quảng cáo.
+Conversions (Lượt chuyển đổi)
 
-Channel: Kênh quảng cáo (Google, Facebook, Email, Display, v.v.).
+CTR (Click-Through Rate): Tỷ lệ nhấp
 
-Budget: Ngân sách phân bổ cho chiến dịch.
+CR (Conversion Rate): Tỷ lệ chuyển đổi
 
-Spend: Chi phí thực tế đã sử dụng.
+* Các chỉ số tài chính (Financial Metrics)
+Cost (Chi phí)
 
-Clicks / Impressions: Số lượt click và hiển thị.
+CPC (Cost Per Click): Chi phí mỗi lượt nhấp
 
-CTR / CR: Tỷ lệ click và tỷ lệ chuyển đổi.
+CPA (Cost Per Acquisition): Chi phí cho mỗi khách hàng chuyển đổi
 
-Revenue / Profit: Doanh thu và lợi nhuận.
+CPM (Cost Per Mille): Chi phí trên 1000 lượt hiển thị
 
-PromotionType: Loại khuyến mãi (Discount, Free Shipping, Promo Code).
+Revenue (Doanh thu)
 
-Các bảng Dimension (Danh mục):
+Sale Amount (Tổng giá trị bán hàng)
 
-AudienceSegment: Phân loại nhóm khách hàng mục tiêu.
+P&L (Profit & Loss): Lợi nhuận hoặc lỗ)
 
-Seasonality: Ghi nhận yếu tố mùa vụ (Holiday, Sale Season, Launch Period).
+ROI (Return on Investment): Tỷ suất lợi nhuận)
 
-AdType: Phân loại hình thức quảng cáo (Video, Banner, Text, Carousel).
+Profit Margin (Biên lợi nhuận)
+* Chỉ số liên quan khác:
+RevenueperImpression(Doanhthutrênmỗilượthiểnthị)
+
+RevenueperClick(Doanhthutrênmỗilượtnhấp)
 
 # 3. Câu hỏi Kinh doanh (Business Questions)
-Hiệu suất tổng thể: Ngân sách quảng cáo được phân bổ như thế nào? Kênh nào mang lại ROI cao nhất?
-
-Phân tích lợi nhuận: Có mối tương quan nào giữa chi tiêu quảng cáo (Ad Spend) và lợi nhuận (P&L)?
-
-Tối ưu hóa ngân sách: Các chiến dịch có ngân sách cao có thực sự mang lại hiệu quả tương xứng không?
-
-Hiệu quả khuyến mãi: Loại khuyến mãi nào (Discount, Free Shipping, Promo Code) tạo ra tỷ lệ chuyển đổi cao nhất?
-
-Phân khúc khách hàng: Nhóm khách hàng nào có mức độ tương tác (Engagement) và chuyển đổi tốt nhất?
+Xác định các xu hướng chính, những chiến dịch thành công và các khu vực kém hiệu quả.
+Trả lời câu hỏi kinh doanh quan trọng: “Chúng ta nên làm gì để nâng cao hiệu quả của chiến lược marketing?”
 
 ## II. Phương pháp Tư duy Thiết kế (Design Thinking Method)
 * Empathize (Thấu cảm): Đặt mình vào góc nhìn của Giám đốc Marketing (CMO) – người cần hiểu rõ nguyên nhân khiến ROI giảm và xác định chiến dịch nào đang tiêu tốn ngân sách mà không mang lại lợi nhuận.
